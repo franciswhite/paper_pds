@@ -12,12 +12,12 @@
 \usepackage{amsmath}
 
 %\usepackage{biblatex}
-%\addbibresource{references_wiggy.bib}
+%\addbibresource{pds_references.bib}
 \usepackage{csquotes}
 \begin{document}
 \maketitle
 \begin{abstract}
-The increase in availability of data and advances in statistical methods has led to the use Machine Learning (ML) technology in an immense variety of societal domains. ML is used to inform decisions as diverse and life changing as whether somebody obtains financial credit, gets admitted to university, is medically treated or left on probation.
+The increase in availability of data and advances in statistical methods has led to the use Machine Learning (ML) technology in an immense variety of societal domains. ML is used to inform decisions as diverse and life changing as whether somebody obtains financial credit, is incarcerated, gets admitted to university, is medically treated or legally monitored by the NSA.
 The use of this technology is not always unproblematic, as its careless application can cause serious harm, even if such effects may occur unintentionally.
 The seriousness of the potential to systematically disadvantage people has led to a recent debate concerning ethical guidelines and best practices for the \emph{general} use of ML.
 Little has been said, however, about the proper use of ML techniques in the specific field of Distributional Semantics (DS). Some researchers have called attention to possible dangers of using ML in DS, as it harbours the potential to reinforce harmful biases along dimensions of race and gender.
@@ -28,18 +28,37 @@ we assess these difference with respect on the impact they have on the applicabi
 \end{abstract}
 \section{Introduction}
 \paragraph{Motivation}
-1-2 paragraphs, talk about application, overal field
+1-2 paragraphs, talk about application, overall field
+
+Algorithms are used to aid decisions and take decisions as diverse as the following: %source politicalgrill
+The theory behind these algorithms is \emph{Machine Learning} (ML).\\
+
+Techniques used for the computer-supported study of language meaning, as in \emph{Distributional Semantics}, are a sub-field of ML.
+What does DS diddelydo?
+
+\begin{quote}
+The term “disparate impact” was first used in the 1971 Supreme Court case Griggs v. Duke Power Company. The Court ruled that, under Title VII of the Civil Rights Act, it was illegal for the company to use intelligence test scores and high school diplomas—factors which were shown to disproportionately favor white applicants and substantially disqualify people of color—to make hiring or promotion decisions, whether or not the company intended the tests to discriminate. A key aspect of the Griggs decision was that the power company couldn’t prove their intelligence tests or diploma requirements were actually relevant to the jobs they were hiring for.
+
+In the years since, several disparate impact cases have made their way to the Supreme Court and lower courts, most having to do with employment discrimination. This June, the Supreme Court’s decision in Texas Dept. of Housing and Community Affairs v. Inclusive Communities Project, Inc. affirmed the use of the disparate impact theory to fight housing discrimination. The Inclusive Communities Project had used a statistical analysis of housing patterns to show that a tax credit program effectively segregated Texans by race. Sorelle Friedler, a computer science 
+researcher at Haverford College and a fellow at Data \& Society, called the Court’s decision “huge,” both “in favor of civil rights…and in favor of statistics.”
+\end{quote}
+
 \paragraph{Contribution}
 largest part of intro, preview of paper, methodology!
+
+The realization that algorithms fed on big data have the potential to amplify structural discrimination and systematically commit grave errors has led to the emergence of a variety of principles, concrete guidelines and public as well as institutional scrutiny.
+In the present paper we want to draw on the existing efforts made by experts in the fields of ethics, computer science, public policy and law to extend these principles and guidelines to the field of DS. Specifically, we will use the \emph{Principles for Accountable Algorithms and a Social Impact Statement for Algorithms} issued by FAT/ML (Fairness, Accountability and Transparency in Machine Learning) - a consortium of researches and experts from private and public organizations working on ML. 
+The principles comprise five guiding principles: responsibility, explainability, accuracy, auditibility and fairness. %cite{principles}
+Second, 
+We will assess potential violation of techniques used in DS for each of these principles and, where applicable, issue guidelines to prevent this.
 \paragraph{Paper Overview}
-In \hyperlink{sec2}{Section 2} I roughly situate the use Wittgenstein makes of this philosophical device in the context of his wider philosophy. As this requires a broader view of his philosophy, I rely on two contrasting exegetical efforts.
-\hyperlink{sec3}{Section 3} is concerned with tracing Wittgenstein's \textit{Remarks on Frazer's ``Golden Bough''} and their relation to the findings of the previous section. Can Wittgenstein’s views on the proper place of anthropological description as well as his own supposed ethnographic investigations be accommodated within his wider philosophical views? Finally, \hyperlink{sec4}{Section 4} concludes and \hyperlink{sec5}{Section 5} contains the bibliography.
+The paper is structured as follows: In \hyperlink{sec2}{Section 2} we first give a very brief introduction to the field of ML in general, before providing some background on the particular algorithmic techniques employed in DS. Especially for the latter we want to provide overview over societal domains where such technology is currently applied and could conceivably be applied in the future. \hyperlink{sec3}{Section 3} contains a discussion of the important ways in which DS, as a particular application of big data analysis, differs from other instances of ML. For the present paper these particularities are important insofar as they entail differences when it comes to its risks and accountabilities across the spectrum of ML. In \hyperlink{sec4}{Section 4}, then, we try to apply the \emph{Principles for Accountable Algorithms and a Social Impact Statement for Algorithms} by FAT/ML to the specific case of DS. \hyperlink{sec5}{Section 5} contains concluding remarks while \hyperlink{sec6}{Section 6} lists the references.
 
 \section{Guidelines for Machine Learning}%\hypertarget{sec2}
 
 \section{Application to DS}%\hypertarget{sec4}
-\paragraph{•}
-\paragraph{Double-nature of textual corpora}
+\paragraph{What's the same: --}
+\paragraph{What's different: Double-nature of textual corpora}
 \section{Related Work}%\hypertarget{sec3}
 \section{Conclusion}
 
