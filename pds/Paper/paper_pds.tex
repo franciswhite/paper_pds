@@ -30,18 +30,25 @@ we assess these difference with respect on the impact they have on the applicabi
 \paragraph{Motivation}
 1-2 paragraphs, talk about application, overall field
 
-Machine Learning (ML) algorithms are used to aid decisions and take decisions as diverse as the following: %source politicalgrill
-The theory behind these algorithms is \emph{Machine Learning} (ML).\\
+As vast amounts of digital data have become available over past decades, algorithms are employed to use the data in order to aid decisions all across society. 
+Algorithms have a say in determining who is granted mortgages, who is released on bail or invited for job applications. 
+\cite{algorithms2016}
+The theory behind these algorithms is \emph{machine learning}.
+Although it seems clear that most designers of machine learning algorithms do not harbor malicious intent, the risk of unwillingly harming people is real.
+Data processed by machine learning techniques often contains societal prejudice and bias, so that unquestioningly using them for decision making can severely reinforce society's existing biases.
+A related issue is that data available to the algorithms may systematically omit information relevant to what it is trying to uncover, as when minority groups are not adequately represented in the data.
+Yet another issue is that machine learning techniques may use useful patterns and relationships in the data that are really mirrorring historical factors of discrimination and marginalization. \cite{barocas2016big}
 
-Techniques used for the computer-supported study of language meaning, as in \emph{Distributional Semantics}, are a sub-field of ML.
+These issues have led to an increasing awareness of the societal difficulties of mindlessly employing machine learning techniques. 
+
 What does DS diddelydo?
+Recently, machine learning techniques used for the computer-based study of language meaning, as in \emph{Distributional Semantics}, has come under scrutiny.
+Various studies have shown that these methods yield results which are in important ways biased against particular groups as, for example, blacks or women.
 
-\begin{quote}
-The term “disparate impact” was first used in the 1971 Supreme Court case Griggs v. Duke Power Company. The Court ruled that, under Title VII of the Civil Rights Act, it was illegal for the company to use intelligence test scores and high school diplomas—factors which were shown to disproportionately favor white applicants and substantially disqualify people of color—to make hiring or promotion decisions, whether or not the company intended the tests to discriminate. A key aspect of the Griggs decision was that the power company couldn’t prove their intelligence tests or diploma requirements were actually relevant to the jobs they were hiring for.
-
-In the years since, several disparate impact cases have made their way to the Supreme Court and lower courts, most having to do with employment discrimination. This June, the Supreme Court’s decision in Texas Dept. of Housing and Community Affairs v. Inclusive Communities Project, Inc. affirmed the use of the disparate impact theory to fight housing discrimination. The Inclusive Communities Project had used a statistical analysis of housing patterns to show that a tax credit program effectively segregated Texans by race. Sorelle Friedler, a computer science 
+%\begin{quote}
+%In the years since, several disparate impact cases have made their way to the Supreme Court and lower courts, most having to do with employment discrimination. This June, the Supreme Court’s decision in Texas Dept. of Housing and Community Affairs v. Inclusive Communities Project, Inc. affirmed the use of the disparate impact theory to fight housing discrimination. The Inclusive Communities Project had used a statistical analysis of housing patterns to show that a tax credit program effectively segregated Texans by race. Sorelle Friedler, a computer science 
 researcher at Haverford College and a fellow at Data \& Society, called the Court’s decision “huge,” both “in favor of civil rights…and in favor of statistics.”
-\end{quote}
+%\end{quote}
 
 \paragraph{Contribution}
 largest part of intro, preview of paper, methodology!
@@ -54,7 +61,9 @@ We will assess potential violation of techniques used in DS for each of these pr
 \paragraph{Paper Overview}
 The paper is structured as follows: In \hyperlink{sec2}{Section 2} we first give a very brief introduction to the field of ML in general, before providing some background on the particular algorithmic techniques employed in DS. Especially for the latter we want to provide overview over societal domains where such technology is currently applied and could conceivably be applied in the future. \hyperlink{sec3}{Section 3} contains a discussion of the important ways in which DS, as a particular application of big data analysis, differs from other instances of ML. For the present paper these particularities are important insofar as they entail differences when it comes to its risks and accountabilities across the spectrum of ML. In \hyperlink{sec4}{Section 4}, then, we try to apply the \emph{Principles for Accountable Algorithms and a Social Impact Statement for Algorithms} by FAT/ML to the specific case of DS. \hyperlink{sec5}{Section 5} contains concluding remarks while \hyperlink{sec6}{Section 6} lists the references.
 \section{Machine Learning and Distributional Semantics}\hypertarget{sec3}{ }
-The term \emph{Machine Learning} is an umbrella term for a variety of statistical methods that, when presented with a series of examples, are able to \emph{learn} how to able to extract generalizable knowledge contained in the examples. What is learned are patterns and relationships within the set of examples - often called the \emph{training data} - and the result is a statistical description - or \emph{model} - of the training data. \cite{fayyad2001digital}  
+The term \emph{Machine Learning} is an umbrella term for a variety of statistical methods that, when presented with a series of examples, are able to \emph{learn} from them. That is, the the set of examples - often called the \emph{training data} - is not simply memorized but generalizable knowledge extracted from it. \cite{domingos2012few}
+ What is learned are patterns and relationships within the training data and the result is a statistical description - or \emph{model} - of the training data. \cite{fayyad2001digital}  
+ The
 \section{Guidelines for Machine Learning}\hypertarget{sec2}{}
 
 \section{Application to DS}\hypertarget{sec4}{ }
