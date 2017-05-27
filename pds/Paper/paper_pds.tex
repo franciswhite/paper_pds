@@ -27,20 +27,28 @@ As the domain of DS differs in important aspects from other domains of ML,
 we assess these difference with respect on the impact they have on the applicability of general purpose ML guidelines to DS.
 \end{abstract}
 \section{Introduction}
-\paragraph{Motivation}
-1-2 paragraphs, talk about application, overall field
-
-As vast amounts of digital data have become available over past decades, algorithms are employed to use the data in order to aid decisions all across society. 
+%1-2 paragraphs, talk about application, overall field
+\paragraph{Place of Machine Learning in society}
+As vast amounts of digital data have become available over past decades, algorithms are employed to use the data in order to take and inform decisions all across society. 
 Algorithms have a say in determining who is granted mortgages, who is released on bail or invited for job applications. 
 \cite{algorithms2016}
 The theory behind these algorithms is \emph{machine learning}.
-Although it seems clear that most designers of machine learning algorithms do not harbor malicious intent, the risk of unwillingly harming people is real.
+Although most designers of machine learning algorithms do not harbor malicious intent, the risk of unwillingly harming people is real.
+\paragraph{Harmful Effects}
+-Privacy - where does data get taken from, who gets to see it, treatment\\
+-Harming Workers - effects of automation\\
+-Questionable Use - military/espionage application\\
+-Reeinforcing discrimination and bias
+
+have the potential to amplify structural discrimination and systematically commit grave errors
+
 Data processed by machine learning techniques often contains societal prejudice and bias, so that unquestioningly using them for decision making can severely reinforce society's existing biases.
 A related issue is that data available to the algorithms may systematically omit information relevant to what it is trying to uncover, as when minority groups are not adequately represented in the data.
 Yet another issue is that machine learning techniques may use useful patterns and relationships in the data that are really mirrorring historical factors of discrimination and marginalization. \cite{barocas2016big}
 
-Recently, machine learning techniques used for the computer-based study of language meaning - a field known as \emph{Computational Distributional Semantics} - has come under scrutiny.
-Various studies have shown that these methods yield results which are in important ways biased against particular groups as, for example, women. \cite{google}
+\paragraph{2b moved}
+Recently, machine learning techniques used for the computer-based study of language meaning - a field known as \emph{computational distributional semantics} - has come under scrutiny.
+Various studies have shown that these methods yield results which are in important ways biased against particular groups as, for example, women \cite{google} \cite{wagner2015s}.
 %\begin{quote}
 %In the years since, several disparate impact cases have made their way to the Supreme Court and lower courts, most having to do with employment discrimination. This June, the Supreme Court’s decision in Texas Dept. of Housing and Community Affairs v. Inclusive Communities Project, Inc. affirmed the use of the disparate impact theory to fight housing discrimination. The Inclusive Communities Project had used a statistical analysis of housing patterns to show that a tax credit program effectively segregated Texans by race. Sorelle Friedler, a computer science 
 %researcher at Haverford College and a fellow at Data \& Society, called the Court’s decision “huge,” both “in favor of civil rights…and in favor of statistics.”
@@ -48,19 +56,43 @@ Various studies have shown that these methods yield results which are in importa
 
 %\paragraph{Contribution}
 %largest part of intro, preview of paper, methodology!
+\paragraph{Public Attention is in ML minor extent in NLP, not in DS}
+The realization that algorithms fed on big data come with a host of problematic issues has led to the emergence of a variety of principles, concrete guidelines and public as well as institutional scrutiny.
 
-The realization that algorithms fed on big data have the potential to amplify structural discrimination and systematically commit grave errors has led to the emergence of a variety of principles, concrete guidelines and public as well as institutional scrutiny.
-In the present paper we want to draw on the existing efforts made by experts in the fields of ethics, computer science, public policy and law to extend these principles and guidelines to the field of DS. Specifically, we will use the \emph{Principles for Accountable Algorithms and a Social Impact Statement for Algorithms} issued by FAT/ML (Fairness, Accountability and Transparency in Machine Learning) - a consortium of researches and experts from private and public organizations working on ML. 
-The principles comprise five guiding principles: responsibility, explainability, accuracy, auditibility and fairness \cite{principles}.
-We will assess potential violation of techniques used in distributional semantics for each of these principles and, where applicable, issue guidelines to prevent their negative impact upon vulnerable groups.
-%\paragraph{Paper Overview}
+\paragraph{Contribution: Drawing on ML discussion for DS, Methodology}
+In the present paper we want to draw on the existing efforts made by experts in the fields of ethics, computer science, public policy and law to extend these principles and guidelines to the field of DS. Specifically, we will use the \emph{Principles for Accountable Algorithms and a Social Impact Statement for Algorithms} (PAASISA) issued by an organization called \emph{Fairness, Accountability and Transparency in Machine Learning} - a consortium of researches and experts from private and public organizations working on machine learning. 
+The PAASISA comprise five guiding principles: responsibility, explainability, accuracy, auditibility and fairness \cite{principles}.
+We will assess potential violation of techniques used in distributional semantics for each of these principles and, where applicable, issue guidelines to prevent their negative impact upon vulnerable groups. 
 
-The paper is structured as follows: In \hyperlink{sec2}{Section 2} we first give a very brief introduction to the field of ML in general, before providing some background on the particular algorithmic techniques employed in DS. Especially for the latter we want to provide overview over societal domains where such technology is currently applied and could conceivably be applied in the future. \hyperlink{sec3}{Section 3} contains a discussion of the important ways in which DS, as a particular application of big data analysis, differs from other instances of ML. For the present paper these particularities are important insofar as they entail differences when it comes to its risks and accountabilities across the spectrum of ML. In \hyperlink{sec4}{Section 4}, then, we try to apply the \emph{Principles for Accountable Algorithms and a Social Impact Statement for Algorithms} by FAT/ML to the specific case of DS. \hyperlink{sec5}{Section 5} contains concluding remarks while \hyperlink{sec6}{Section 6} lists the references.
+\paragraph{Paper Overview}
+The paper is structured as follows: In \hyperlink{sec2}{Section 2} we first give a very brief introduction to the field of machine learning in general, before providing some background on the algorithmic techniques employed in distributional semantics. Especially for the latter we want to provide overview over societal domains where such technology is currently applied and could conceivably be applied in the future. \hyperlink{sec3}{Section 3} contains a discussion of the important ways in which DS, as a particular application of big data analysis, differs from other instances of ML. For the present paper these particularities are important insofar as they entail differences when it comes to its risks and accountabilities across the spectrum of ML. In \hyperlink{sec4}{Section 4}, then, we try to apply the \emph{Principles for Accountable Algorithms and a Social Impact Statement for Algorithms} by FAT/ML to the specific case of DS. \hyperlink{sec5}{Section 5} contains concluding remarks while \hyperlink{sec6}{Section 6} lists the references.
 \section{Machine Learning and Distributional Semantics}\hypertarget{sec3}{ }
-The term \emph{Machine Learning} is an umbrella term for a variety of statistical methods that, when presented with a series of examples, are able to \emph{learn} from them. That is, the the set of examples - often called the \emph{training data} - is not simply memorized but generalizable knowledge extracted from it. \cite{domingos2012few}
- What is learned are patterns and relationships within the training data and the result is a statistical description - or \emph{model} - of the training data. \cite{fayyad2001digital}  
- The
+The term \emph{Machine Learning} is an umbrella term for a variety of statistical methods that are able to \emph{learn} from a series of examples presented to them. The the set of examples - often called the \emph{training data} - is not simply memorized but the machine learning algorithm extracts generalizable knowledge \cite{domingos2012few}.
+ What the algorithm learns are patterns and relationships within the training data and the result of the learning process is a statistical description - or \emph{model} - of the training data \cite{fayyad2001digital}.
+ 
+ \paragraph{Distributional Semantics}
+Distributional semantics is a linguistic theory of meaning looking to represent lexical meaning of expressions as a function of the context in which they appear. It theoretically foundation is the so-called \emph{distributional hypothesis} which holds that two expressions are similar in meaning, if they occur in similar contexts \cite{harris1954distributional}.
+Althought it was originally developed as a distributional theory - in the sense that ... - in the middle of the 20th century, it can be seen as following the footsteps of structural linguists, notably Bloomfield \cite{bloomfield}
+
+More info on DS. use \cite{boleda2016formal}
+
+The theoretical framework of distributional semantics has become widely used and further developed as the advent and success of computational methods have enabled linguist to build large-scale models of linguistic meaning using digitalised corpora of text. 
+ 
+\paragraph{ML methods in DS, some examples}
+
+\paragraph{Where models of meaning could have an import}
+ 
 \section{Guidelines for Machine Learning}\hypertarget{sec2}{}
+Algorithmically informed decisions are used in ever more domains of the private and public sectors and thus have the potential to impact society in significant ways. In many cases of undesirable effects that come with these technologies, legislation is behind in adequately protecting people negatively affected by it. Often a clear legal base is lacking to give clear guidelines.
+
+Given this state of affairs, it is important to hold the people who develop or implement such algorithmic systems accountable to the public. The FAT-ML concisely write in their PAA \cite{principles}
+\begin{quote}
+Algorithms and the data that drive them are designed and created by people -- There is always a human ultimately responsible for decisions made or informed by an algorithm. ''The algorithm did it'' is not an acceptable excuse if algorithmic systems make mistakes or have undesired consequences, including from machine-learning processes.
+\end{quote}
+
+The document then goes on to name five principles that should guide developders of algorithms in designing and implementing their systems. The authors of PAA urge creators to issue a Social Impact Statement wherein they detail the effect of their product has on society with respect to the five principles. In this way the principles are associeated with best practices in the ...
+
+We will now briefly go over the five principles to explaint their content.
 
 \section{Application to DS}\hypertarget{sec4}{ }
 \paragraph{What's the same: --}
