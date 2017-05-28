@@ -91,12 +91,25 @@ Distributional semantics, then, takes the context in which an expression occurs 
 
 \paragraph{Relation: NLP - DS}
 Distributional semantics is concerned with a specific topic in the study of natural language, namely, meaning. It could thus be seen as one of many sub-fields of natural language processing research. 
-It is notoriously difficult to come to grips with the concept of meaning from philosophical standpoint.
-DS sits at the intersection of ethically touchy topics: capturing/reporting/describing bias leads to reenforcing bias. results can be highly sensitive to data selection. even if results are valid there are issues of over/under-representation (scottish accent),
- 
+From a philosophical standpoint, it is notoriously difficult to come to grips with the concept of meaning .
+Distributional semantics sits at the intersection of ethically touchy topics. 
+First off, consider the situation where a meaning space is constructed based on some seemingly innocuous corpus and ends up containing severe bias along lines of gender or racial stereotypes. A recent study has found, for example, that a model trained on Google News articles display significant bias along binary gender dimensions \cite{bolukbasi2016man}. This raises a host of questions concerning the provenance of the bias, the adequate response by the responsible distributional semanticist and, not to mention, the nature of meaning.
+
+Does one have to live with the fact that the meanings discovered in some corpus systematically contain unfavourable connotations for some group of people? After all, the corpus was produced by a particular society, so it should be expected that it mirror that society's prejudices. Is the stance "the model picked up what it is supposed to pick up, blame society" a fair one, or has the computational linguist the moral obligation to rid her model of biased meaning representations?
+
+Fair and square, the model contains bias because the corpus contains bias. What if the semantic model is further used for some interaction within that same society that taught it - via corpus - what it means to be a \emph{woman}, will the bias be further re-enforced? It is has been reported that when one queries Google with the name of a person, then Google is more likely to show advertisement related to that person being arrested if the name's connotation is black \cite{sweeney2013discrimination}.
+%A related issue is that even if results are valid, the of over-, or, respectively, under-representation of specific items in the data can disadvantage group. 
+
 \paragraph{The state of the ethical discussion in ML, NLP and DS}
--ML well underway. series of legal, political and cs studies on the topic. many articles in non-technical or academic media. be specific, mention FATML. use nlp ethic article to get overview.\\
--NLP has seen some movement in the last couple of years. some conferences on ethical issues. even concrete proposals for best practices.\\
+For the domain general use of machine learning techniques there exists a series of studies by now from legal, political computer science experts which specify principles and guidelines. Furthermore, many non-technical articles have been published outside of academic channels. 
+be specific, mention FATML. use nlp ethic article to get overview.\\
+
+In the case of natural language processing there has been  has seen some movement in the last couple of years.
+For machine learning and natural language processing there are several  conferences on ethical issues by now.
+http://www.ethicsinnlp.org/related-conferences
+
+
+ even concrete proposals for best practices.\\
 -DS in particular has seen little attention.
 
 \paragraph{What good should come from looking at DS?}
