@@ -17,13 +17,13 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-The increase in availability of data and advances in statistical methods has led to the use of Machine Learning (ML) technology in an immense variety of societal domains. ML algorithms are used to inform decisions as diverse and life-changing as access to financial credit, incarceration, university admission, medical treatment or the boundaries of espionage by the NSA.
+The increase in availability of data and advances in statistical methods has led to the use of Machine Learning (ML) technology in an immense variety of societal domains. ML algorithms are used to inform decisions as diverse and life-changing as access to financial credit, incarceration, university admission, medical treatment or the legal boundaries of espionage by the NSA.
 The use of this technology is not always unproblematic, as its careless application can cause serious harm, even if such effects occur unintentionally.
 The seriousness of the potential to disrespect people's privacy and integrity or systematically disadvantage specific groups has led to a recent debate concerning ethical guidelines and best practices for the general use of ML.
 Little has been said, however, about the proper use of algorithms in the specific field of Distributional Semantics (DS). Some researchers have called attention to possible dangers of using ML in DS, as it harbours the potential to reinforce harmful biases along dimensions of race and gender.
 The present paper wants to point to one particular attempt to provide general-purpose guidelines for ML and draw on these existing insights to suggest guidelines and best practices for computational methods in DS.
-As the domain of DS differs in important aspects from other domains of ML, notably Natural Language Processing (NLP),
-we assess these difference with respect on the impact they have on the applicability of general purpose ML guidelines to DS.
+As the domain of DS differs in important aspects from other applications of ML, notably also for Natural Language Processing (NLP),
+this involves assessing  the applicability of general purpose ML guidelines to DS with these difference in mind.
 \end{abstract}
 \section{Introduction}
 %1-2 paragraphs, talk about application, overall field
@@ -31,19 +31,13 @@ we assess these difference with respect on the impact they have on the applicabi
 As vast amounts of digital data have become available over past decades, algorithms are employed to use the data in order to take and inform decisions all across society. 
 Algorithms have a say in determining who is granted mortgages, who is released on bail or invited for job applications. 
 \cite{algorithms2016}
-The theory behind these algorithms is \emph{machine learning}.
-Although most inventors and designers of machine learning algorithms do not harbor malicious intent, the risk of unwillingly harming people is real.
+The theory behind many of these algorithms is \emph{machine learning} (ML).
+Although most inventors and designers of ML algorithms certainly do not harbor malicious intent, the risk of unwillingly harming people is real.
+
 \paragraph{Harmful Effects}
-There are several different sources of harmful effects that these techniques can bring about.
+There are several different sources of harmful effects that these techniques can bring about. With the very large data collected, stored and processed, issues of privacy arise naturally. Especially when data mining techniques are used to scrape the web, people's explicit consent to provide their data can easily go by the board. Another recurrent problem is the two-sided nature of any technology: it can be used for the good or for dubious purposes, as fraud or spying, for example. Finally, big data and ML approaches brings the risk of reenforcing structural bias along racial, gender or others social lines in society. Models trained on biased historical data, for example, have been used to determine prison sentences which lead to consistently biased outcomes against blacks and latinos in the United States of America, land of the brave and home of the free \cite{angwin2016machine}.
 
-A first concern is the issue of privacy. Since very large amounts of data are required for these methods to be effective, great efforts are devoted to collecting large data sets. Depending on the issue at hand, these data sets may contain highly sensitive information about individuals or organizations. It is thus of importance who gets to see these data and in what they are protected from third parties accessing them. There have been reported cases of researchers working with large corpora of texts containing peoples' complete medical record who sent these files indiscriminately around by email. A second aspect of privacy is how the data is collected in the first place. It is a question of ethical concern whether the individuals whose data is collected agree to their personal information being used. What the standards should be here isstill  far from clear as automated data-mining techniques gain popularity.
 
-A second point concerns the disruptive potential machine learning techniques have on labor markets. As ever more cognitive tasks can be automated, the economic landscape of service sector economies is bound undergo change. Some workers will without a doubt be disadvantaged by these changes. It must concern the inventors and implentors of such technology what happens here.
-
-A third difficult point is the so-called \emph{double use} problem. New technology's use is often underspecified and could be used for benefit of humanity or to its detriment. Chat-bots developed by researchers in automated natural language processing, to name a concrete example, can be used to assist people to access governmental health-care serices, yet they have reportedly been used by the Mexican government to disrupt political discussions deemed subversive on social media. \cite{leidner2017ethical}
-
-Finally, machine learning harbours the potential to amplify structural discrimination and systematically disadvantage people because of their race, gender or other social category. If the models which are trained algorithmically are fed biased data, then predictions or classifications they make will reflect that bias.
-Data processed by machine learning techniques often contains societal prejudice and bias, so that unquestioningly using them for decision making can severely reinforce society's existing biases. A related issue is that data available to the algorithms may systematically omit information relevant to what it is trying to uncover, as when minority groups are not adequately represented in the data. Yet another issue is that machine learning techniques may use useful patterns and relationships in the data that are really mirrorring historical factors of discrimination and marginalization. \cite{barocas2016big}
 
 In the present essay, we will mostly be concerned with the last of these problematic issues surrounding machine learning.
 
@@ -77,20 +71,20 @@ The paper is structured as follows: In \hyperlink{sec2}{Section 2} we first give
 The term \emph{Machine Learning} is an umbrella term for a variety of statistical methods that are able to \emph{learn} from a series of examples presented to them. The the set of examples - often called the \emph{training data} - is not simply memorized but the machine learning algorithm extracts generalizable knowledge \cite{domingos2012few}.
  What the algorithm learns are patterns and relationships within the training data and the result of the learning process is a statistical description - or \emph{model} - of the training data \cite{fayyad2001digital}.
 \paragraph{What is NLP?}
-Natural language processing is a field of research that uses computational tools to study natural language text or speech. The knowledge thus obtained can be used to develop computer systems to serve a wide variety of purposes. Principal applications include translation between natural languages, artificial intelligence, user interfaces, like chat-bots, for example, summarization of text or speech recognition \cite{chowdhury2003natural}.
+Natural language processing is a field of research that uses computational tools to build natural language text or speech applications. It is related to computational linguistic, an area of linguistic that uses computational techniques to get a scientific understanding of natural language. The knowledge thus obtained can be used in natural language processing to develop computer systems that serve a wide variety of purposes. Principal applications include translation between natural languages, artificial intelligence, user interfaces, like chat-bots, for example, summarization of text or speech recognition \cite{chowdhury2003natural}.
 \paragraph{Relation: ML - NLP}
 The area of natural language processing frequently serves itself of methods from machine learning, for example to process very large textual corpora. Indeed, parts of natural language processing can be thought of as particular applications of machine learning techniques to the domain of natural language.
 \paragraph{What is Distributional Semantics?}
-Distributional semantics is a linguistic theory of meaning looking to represent lexical meaning of expressions as a function of the context in which they appear. It theoretically foundation is the so-called \emph{distributional hypothesis} which holds that two expressions are similar in meaning, if they occur in similar contexts \cite{harris1954distributional}.
+Distributional semantics is a linguistic theory of meaning looking to represent lexical meaning of expressions as a function of the context in which they appear. Its theoretically foundation is the so-called \emph{distributional hypothesis} which holds that two expressions are similar in meaning, if they occur in similar contexts \cite{harris1954distributional}.
 %Althought it was originally developed as a distributional theory - in the sense that ... - in the middle of the 20th century, it can be seen as following the footsteps of structural linguists, notably Bloomfield \cite{bloomfield}
 
-The theory of distributional semantics has been used successfully in computational semantics, as it has become possible to obtain semantic representations immediately from natural language data . The theoretical framework of distributional semantics has become widely used and further developed as the advent and success of computational methods have enabled linguist to build large-scale models of linguistic meaning using digitalised corpora of text. 
+The theory of distributional semantics has been used successfully in computational semantics - an branch of computational lingiustics -, as it has become possible to obtain semantic representations immediately from natural language data. The theoretical framework of distributional semantics has become widely used and further developed as the advent and success of computational methods have enabled linguist to build large-scale models of linguistic meaning using digitalised corpora of text. 
 Following the distributional hypothesis, the meaning of an expression is a function of the context in which it occurs, where context can be construed in different ways. Most typically, it is other words surrounding an expression in a text - the sentence in which it appears, for example. Context is not restricted to such simple analysis, however, as it can possibly contain more complex syntactic relations within a text, or even visual, textual or auditory information gathered from data.
 \cite{boleda2016formal}
 Distributional semantics, then, takes the context in which an expression occurs and abstracts away from the particular contexts in a large corpus of natural language data. The mathematical vehicle for representing these abstractions are commonly vectors, but there are also other algebraic objects possible, as matrices or tensors. The meaning of an expression, as a function of its context, is then represented by the distribution across the dimensions of the vector. A set of words thus represented builds a semantic space - mathematically, a vector space - wherein one can study the semantic relationship between the expressions because some semantic relationships between expressions are mirrored by geometric relationship in these spaces.
 
 \paragraph{Relation: NLP - DS}
-Distributional semantics is concerned with a specific topic in the study of natural language, namely, meaning. It could thus be seen as one of many sub-fields of natural language processing research. 
+Distributional semantics is concerned with the specific topic of meaning in the study of natural language. If viewed from an application-oriented standpoint it could be seen as one of many sub-fields of natural language processing research. Indeed, as far as the present paper is concerned, it is precisely the application of distributional semantics in industry that warrants heightened attention.
 From a philosophical standpoint, it is notoriously difficult to come to grips with the concept of meaning .
 Distributional semantics sits at the intersection of ethically touchy topics. 
 First off, consider the situation where a meaning space is constructed based on some seemingly innocuous corpus and ends up containing severe bias along lines of gender or racial stereotypes. A recent study has found, for example, that a model trained on Google News articles display significant bias along binary gender dimensions \cite{bolukbasi2016man}. This raises a host of questions concerning the provenance of the bias, the adequate response by the responsible distributional semanticist and, not to mention, the nature of meaning.
@@ -115,6 +109,15 @@ http://www.ethicsinnlp.org/related-conferences
 \paragraph{What good should come from looking at DS?}
 -focus not on dual-use or bad treatment of mechanical turks, but the question how bias in meaning is dangerous.\\
 -Why not ethics by design
+A first concern is the issue of privacy. Since very large amounts of data are required for these methods to be effective, great efforts are devoted to collecting large data sets which may contain highly sensitive information about individuals or organizations. It is thus of importance who gets to see these data and how they are protected from third parties accessing them. There have been reported cases of researchers working with large corpora of texts containing peoples' complete medical record who sent these files indiscriminately around by email. A second aspect of privacy is how the data is collected in the first place. It is a question of ethical concern whether the individuals whose data is collected agree to their personal information being used. What the standards should be here isstill  far from clear as automated data-mining techniques gain popularity.
+
+A second point concerns the disruptive potential machine learning techniques have on labor markets. As ever more cognitive tasks can be automated, the economic landscape of service sector economies is bound undergo change. Some workers will without a doubt be disadvantaged by these changes. It must concern the inventors and implentors of such technology what happens here.
+
+A third difficult point is the so-called \emph{double use} problem. New technology's use is often underspecified and could be used for benefit of humanity or to its detriment. Chat-bots developed by researchers in automated natural language processing, to name a concrete example, can be used to assist people to access governmental health-care serices, yet they have reportedly been used by the Mexican government to disrupt political discussions deemed subversive on social media. \cite{leidner2017ethical}
+
+Finally, machine learning harbours the potential to amplify structural discrimination and systematically disadvantage people because of their race, gender or other social category. If the models which are trained algorithmically are fed biased data, then predictions or classifications they make will reflect that bias.
+Data processed by machine learning techniques often contains societal prejudice and bias, so that unquestioningly using them for decision making can severely reinforce society's existing biases. A related issue is that data available to the algorithms may systematically omit information relevant to what it is trying to uncover, as when minority groups are not adequately represented in the data. Yet another issue is that machine learning techniques may use useful patterns and relationships in the data that are really mirrorring historical factors of discrimination and marginalization. \cite{barocas2016big}
+
 \section{Guidelines for Machine Learning}\hypertarget{sec2}{}
 \paragraph{Introduce FATML}
 Algorithmically informed decisions are used in ever more domains of the private and public sectors and thus have the potential to impact society in significant ways. In many cases of undesirable effects that come with these technologies, legislation is behind in adequately protecting people negatively affected by it.
@@ -124,12 +127,10 @@ Given this state of affairs, it is important to hold the people who develop or i
 Algorithms and the data that drive them are designed and created by people -- There is always a human ultimately responsible for decisions made or informed by an algorithm. ''The algorithm did it'' is not an acceptable excuse if algorithmic systems make mistakes or have undesired consequences, including from machine-learning processes.
 \end{quote}
 
-The document then goes on to name five principles that should guide developders of algorithms in designing and implementing their systems. The authors of PAA urge creators to issue a Social Impact Statement wherein they detail the effect of their product has on society with respect to the five principles. In this way the principles are associated with best practices in the ...
-
+The document then goes on to name five principles that should guide developders of algorithms in designing and implementing their systems. The authors of PAA urge creators to issue a Social Impact Statement wherein they detail the effect of their product has on society with respect to the five principles. In this way the principles are associated with a set of best practices.
 \paragraph{5 Principles, quick recap of each of them}
-
-We will now briefly go over the five principles to explaint their content.
-
+We will now briefly go over the five principles - \emph{responsibility, explanability, accuracy, auditability and fairness} to explain their intention.
+Responsibility requires developers to take into account possible adverse effects of their algorithmic system. There should be designated roles within the organization.
 
 
 \section{Application to DS}\hypertarget{sec4}{ }
